@@ -8,8 +8,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到秘密基地🏠', url: 'xin27.cn' },
-    { title: '好记性不如烂笔头✏️', url: 'xin27.cn' }
+    { title: '欢迎来到秘密基地🏠', url: 'https://www.xin27.cn/' },
+    { title: '好记性不如烂笔头✏️', url: 'https://www.xin27.cn/' }
   ],
 
   // 英雄区左右侧组件颠倒位置
