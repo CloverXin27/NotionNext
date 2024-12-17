@@ -1,5 +1,5 @@
 const CONFIG = {
-  HEO_HOME_POST_TWO_COLS: false, // 首页博客两列显示，若为false则只显示一列
+  HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
   HEO_LOADING_COVER: true, // 页面加载的遮罩动画
 
   HEO_HOME_BANNER_ENABLE: true,
@@ -8,8 +8,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到秘密基地🏠', url: '' },
-    { title: '好记性不如烂笔头✏️', url: '' }
+    { title: '欢迎来到秘密基地🏠', url: 'xin27.cn' },
+    { title: '好记性不如烂笔头✏️', url: 'xin27.cn' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -21,7 +21,7 @@ const CONFIG = {
   HEO_HERO_TITLE_1: '分享记录',
   HEO_HERO_TITLE_2: '技术与踩坑',
   HEO_HERO_TITLE_3: 'XIN27.CN',
-  HEO_HERO_TITLE_4: '坚持初心',
+  HEO_HERO_TITLE_4: '坚持始终',
   HEO_HERO_TITLE_5: '永远怀一颗学徒的心⚔️',
   HEO_HERO_TITLE_LINK: 'https://xin27.cn',
   // 英雄区遮罩文字
