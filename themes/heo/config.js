@@ -22,15 +22,15 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '技术与踩坑',
   HEO_HERO_TITLE_3: 'XIN27.CN',
   HEO_HERO_TITLE_4: '坚持始终',
-  HEO_HERO_TITLE_5: '永远怀一颗学徒的心⚔️',
+  HEO_HERO_TITLE_5: '踏上取经路,比抵达灵山更重要！',
   HEO_HERO_TITLE_LINK: 'https://xin27.cn',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门文章' },
-  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
+  HEO_HERO_CATEGORY_1: { title: '在线工具', url: '/online_tool' },
+  HEO_HERO_CATEGORY_2: { title: '资源分享', url: '/resource' },
+  HEO_HERO_CATEGORY_3: { title: '🚧施工中', url: '/tag3' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '推荐',
