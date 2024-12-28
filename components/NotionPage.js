@@ -156,7 +156,7 @@ const processGalleryImg = zoom => {
       )
       if (imgList && zoom) {
         for (let i = 0; i < imgList.length; i++) {
-          zoom.attach(imgList[i])
+          // zoom.attach(imgList[i]) # 不让图片放大生效
         }
       }
 
