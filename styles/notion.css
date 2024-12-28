@@ -646,7 +646,7 @@ svg.notion-page-icon {
 }
 
 .notion-inline-underscore {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .notion-list {
@@ -1468,7 +1468,7 @@ code[class*='language-'] {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 500;
+  font-weight: 600;
   @apply dark:text-gray-200;
 }
 
@@ -1534,6 +1534,7 @@ code[class*='language-'] {
 .notion-list-item-property .notion-property-multi_select-item {
   margin-bottom: 0;
   flex-wrap: none;
+  font-weight: 600;
 }
 
 .notion-list-item-property .notion-property-multi_select-item:last-of-type {
@@ -1751,7 +1752,7 @@ svg + .notion-page-title-text {
 .notion-collection-header-title {
   display: inline-flex;
   align-items: center;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 1.2;
   font-weight: 600;
   white-space: pre-wrap;
