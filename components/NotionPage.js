@@ -40,6 +40,7 @@ const NotionPage = ({ post, className }) => {
     if (POST_DISABLE_GALLERY_CLICK) {
       // 针对页面中的gallery视图，点击后是放大图片还是跳转到gallery的内部页面
       processGalleryImg(zoomRef?.current)
+      processUpdateHrefWithFormAction() // 将画廊中的url改为action中的值
     }
 
     // 页内数据库点击禁止跳转，只能查看
@@ -156,7 +157,7 @@ const processGalleryImg = zoom => {
       )
       if (imgList && zoom) {
         for (let i = 0; i < imgList.length; i++) {
-          zoom.attach(imgList[i])
+          // zoom.attach(imgList[i]) # 不让图片放大生效
         }
       }
 
