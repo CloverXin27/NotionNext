@@ -112,13 +112,46 @@ const NotionPage = ({ post, className }) => {
 /**
  * 页面的数据库链接禁止跳转，只能查看
  */
+// const processDisableDatabaseUrl = () => {
+//   if (isBrowser) {
+//     const links = document.querySelectorAll('.notion-table a')
+//     for (const e of links) {
+//       e.removeAttribute('href')
+//     }
+//   }
+// }
+
+/**
+ * 页面的数据库链接变更为跳转action中的值
+ */
 const processDisableDatabaseUrl = () => {
   if (isBrowser) {
-    const links = document.querySelectorAll('.notion-table a')
-    for (const e of links) {
-      e.removeAttribute('href')
+    const links = document.querySelectorAll('.notion-table a');
+    const forms = document.querySelectorAll('.notion-table form'); // 获取所有的form元素（假设它们都在同一表格内）
+    
+    for (const link of links) {
+      const form = findAncestor(link, 'form'); // 寻找包含当前链接的form元素
+      if (form && form.hasAttribute('action')) { // 确保form有action属性
+        const actionUrl = form.getAttribute('action'); // 获取form的action属性值
+        link.setAttribute('href', actionUrl); // 设置链接的href属性值为form的action属性值
+      } else {
+        // 如果找不到对应的form或者form没有action属性，可以设置一个默认或者占位符URL，或者抛出一个错误
+        console.error(`No form or action attribute found for link ${link}`);
+      }
     }
   }
+};
+
+// 辅助函数：查找给定元素的祖先元素中是否有指定的标签名
+function findAncestor(element, tagName) {
+  let parent = element.parentElement;
+  while (parent !== null) {
+    if (parent.tagName.toLowerCase() === tagName) {
+      return parent; // 找到对应的祖先元素后返回它
+    }
+    parent = parent.parentElement; // 继续向上查找祖先元素直到没有更多祖先为止（document 或者 null）
+  }
+  return null; // 没有找到对应的祖先元素则返回null
 }
 
 /**
