@@ -128,8 +128,9 @@ const processDisableDatabaseUrl = () => {
 const processUpdateHrefWithFormAction = () => {
   if (isBrowser) {
     const cards = document.getElementsByClassName('notion-collection-card')
-    
+    console.log("我执行啦！");
     for (const link of cards) {
+      link.removeAttribute('href')
       const form = link.querySelector('.notion-property-url').querySelector('form'); // 只查找具有 class="notion-property-url" 的子元素中的 form
       if (form && form.hasAttribute('action')) {
         const actionUrl = form.getAttribute('action'); // 获取form的action属性值
@@ -138,6 +139,7 @@ const processUpdateHrefWithFormAction = () => {
         // 隐藏具有 class="notion-property-url" 的元素
         form.style.display = 'none'; // 或者使用 form.classList.add('hidden'); 需要配合对应的 CSS
       } else {
+        link.removeAttribute('href')
         console.error(`No form or action attribute found for link ${link}`);
       }
     }
